@@ -35,34 +35,61 @@ blockquote {
 	--limetka: #c4e538;
 }
 
-/*
-	Všimni si, jak jsou zde nadefinované barvy.
-	Potřebný kód barvy si odtamtud můžeš vyzobnout a použít
-	ve svém kódu, ale existuje i lepší způsob.
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	gap: 40px;
+}
 
-  CSS custom properties, někdy také označované jako CSS
-	variables (CSS proměnné), je způsob, jak si	pojmenovat
-	nějakou hodnotu a potom ji v kódu opakovaně používat.
-	Často se používá právě pro barvy a další "nastavení".
+.blog header,
+.blog h2,
+.blog h3,
+.blog p {
+	grid-column: 2;
+	margin: 0;
+}
 
-	Když si chci nějakou hodnotu nadefinovat, použiji zápis
-	--mujnazev: hodnota
-	Když chci, abych mohl hodnotu používat všude v CSS,
-	založím ji uvnitř selektoru :root, takže např.:
-	:root {
-		--mojebarva: #ff8800;
-	}
+.blog figure,
+.blog blockquote,
+footer {
+	grid-column: 1 / -1;
+}
 
-	Chci-li potom dál v CSS hodnotu použít, stačí použít funkci var a v závorce název proměnné.Např.:
-	.odstavec {
-		color: var(--mojebarva);
-	}
+.tip-vlevo {
+	grid-column: 1;
+}
 
-	Nemusím si tak pamatovat kódy barev nebo neustále v CSS jezdit nahoru a dolů, abych si je odněkud zkopíroval.
+.tip-vpravo {
+	grid-column: -2;
+}
 
-	Více o CSS custom properties:
-	- https://www.w3schools.com/css/css3_variables.asp
-	- https://css-tricks.com/patterns-for-practical-css-custom-properties-use/
-	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
-*/
+.blog img {
+	width: 100%;
+}
+
+header h1 {
+	font-size: 6rem;
+	color: var(--zelena);
+	margin-bottom: 3rem;
+}
+
+.meta {
+	color: var(--seda);
+}
+
+.tip {
+	background-color: var(--svetla);
+	font-size: 1rem;
+	padding: 2rem;
+	align-self: start;
+}
+
+.tip a {
+	color: var(--oranzova);
+}
+
+.tip-vlevo {
+	border-right: 3px solid var(--zluta);	
+}
+
 
