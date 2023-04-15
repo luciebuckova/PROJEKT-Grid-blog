@@ -39,6 +39,8 @@ blockquote {
 	display: grid;
 	grid-template-columns: 1fr 4fr 2fr;
 	gap: 40px;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .blog header,
@@ -50,8 +52,7 @@ blockquote {
 }
 
 .blog figure,
-.blog blockquote,
-footer {
+.blog blockquote {
 	grid-column: 1 / -1;
 }
 
@@ -63,8 +64,13 @@ footer {
 	grid-column: -2;
 }
 
+.blog footer {
+	grid-column: 2 / 3;
+}
+
 .blog img {
 	width: 100%;
+	object-fit: cover;
 }
 
 header h1 {
@@ -80,7 +86,7 @@ header h1 {
 .tip {
 	background-color: var(--svetla);
 	font-size: 1rem;
-	padding: 2rem;
+	padding: 20px;
 	align-self: start;
 }
 
@@ -89,7 +95,63 @@ header h1 {
 }
 
 .tip-vlevo {
-	border-right: 3px solid var(--zluta);	
+	border-right: 3px solid var(--zluta);
+	text-align: right;	
+}
+
+.tip-vpravo {
+	border-left: 3px solid var(--zluta);	
+}
+
+.blog figure {
+	margin: 0;
+}
+
+.blog figcaption {
+	color: var(--seda)
+}
+
+.blog blockquote {
+	margin: 0;
+	text-align: center;
+	font-size: 2.5rem;
+	color: var(--seda);
+}
+
+.blog blockquote::before {
+	content: "";
+	display: block;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--limetka);
+	width: 3em;
+	height: 3px;
+}
+
+.blog blockquote::after {
+	content: "";
+	display: block;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--limetka);
+	width: 3em;
+	height: 3px;
+}
+
+.blog h2 {
+	font-size: 4rem;
+	color: var(--zelena);
+}
+
+.blog footer {
+	font-size: 1rem;
+	color: var(--seda);
+}
+
+footer a {
+	color: var(--seda);
 }
 
 
