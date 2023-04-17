@@ -35,6 +35,7 @@ blockquote {
 	--limetka: #c4e538;
 }
 
+/* CSS grid */
 .blog {
 	display: grid;
 	grid-template-columns: 1fr 4fr 2fr;
@@ -42,6 +43,8 @@ blockquote {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
+/* umístění položek do gridu */
 
 .blog header,
 .blog h2,
@@ -68,15 +71,17 @@ blockquote {
 	grid-column: 2 / 3;
 }
 
+/* formátování obrázků a textu */
+
 .blog img {
 	width: 100%;
 	object-fit: cover;
 }
 
 header h1 {
-	font-size: 6rem;
+	font-size: 80px;
 	color: var(--zelena);
-	margin-bottom: 3rem;
+	margin-bottom: 1em;
 }
 
 .meta {
@@ -85,7 +90,8 @@ header h1 {
 
 .tip {
 	background-color: var(--svetla);
-	font-size: 1rem;
+	font-size: 14px;
+	color: var(--tmava);
 	padding: 20px;
 	align-self: start;
 }
@@ -94,13 +100,17 @@ header h1 {
 	color: var(--oranzova);
 }
 
+.tip a:visited {
+	color: var(--cervena);
+}
+
 .tip-vlevo {
-	border-right: 3px solid var(--zluta);
+	border-right: 2px solid var(--zluta);
 	text-align: right;	
 }
 
 .tip-vpravo {
-	border-left: 3px solid var(--zluta);	
+	border-left: 2px solid var(--zluta);	
 }
 
 .blog figure {
@@ -114,39 +124,39 @@ header h1 {
 .blog blockquote {
 	margin: 0;
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: 35px;
 	color: var(--seda);
 }
 
 .blog blockquote::before {
 	content: "";
 	display: block;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: var(--limetka);
-	width: 3em;
-	height: 3px;
+	width: 115px;
+	height: 2px;
 }
 
 .blog blockquote::after {
 	content: "";
 	display: block;
-	margin-top: 15px;
+	margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: var(--limetka);
-	width: 3em;
-	height: 3px;
+	width: 115px;
+	height: 2px;
 }
 
 .blog h2 {
-	font-size: 4rem;
+	font-size: 60px;
 	color: var(--zelena);
 }
 
 .blog footer {
-	font-size: 1rem;
+	font-size: 14px;
 	color: var(--seda);
 }
 
